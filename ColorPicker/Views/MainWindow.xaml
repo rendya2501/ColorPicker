@@ -1,0 +1,110 @@
+﻿<Window
+    x:Class="ColorPicker.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ColorPicker"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="clr-namespace:ColorPicker.ViewModel"
+    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    d:DataContext="{d:DesignInstance Type=vm:MainWindowViewModel}"
+    mc:Ignorable="d">
+    <Window.DataContext>
+        <vm:MainWindowViewModel />
+    </Window.DataContext>
+    <Grid>
+        <xctk:ColorPicker
+            x:Name="_ColorPoicker"
+            Width="193"
+            Height="29"
+            Margin="60,173,539,217"
+            SelectedColor="{Binding Color, Mode=TwoWay}" />
+        <TextBox
+            Name="_Int"
+            Width="193"
+            Height="29"
+            Margin="60,37,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding Int_32BitARGB, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <!--
+            KeyDown="_Int_KeyDown" LostFocus="_Int_LostFocus"
+        -->
+        <TextBox
+            Name="_R"
+            Width="35"
+            Height="29"
+            Margin="60,139,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding R, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <Border
+            Name="_Border"
+            Width="136"
+            Height="166"
+            Margin="258,37,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Background="{Binding BorderBackground, Mode=OneWay}"
+            BorderBrush="Black"
+            BorderThickness="1" />
+        <TextBox
+            x:Name="_G"
+            Width="35"
+            Height="29"
+            Margin="112,139,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding G, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="_B"
+            Width="35"
+            Height="29"
+            Margin="166,139,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding B, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="_A"
+            Width="35"
+            Height="29"
+            Margin="218,139,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding A, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <TextBox
+            x:Name="_Hexadecimal"
+            Width="193"
+            Height="29"
+            Margin="60,71,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding Hexadecimal, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <!--
+            KeyDown="_Int_KeyDown"
+            LostFocus="_Int_LostFocus"
+        -->
+        <TextBox
+            x:Name="_HTML"
+            Width="193"
+            Height="29"
+            Margin="60,105,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Text="{Binding Html, Mode=TwoWay}"
+            TextWrapping="Wrap" />
+        <!--
+            KeyDown="_Int_KeyDown"
+            LostFocus="_Int_LostFocus"
+        -->
+    </Grid>
+</Window>
