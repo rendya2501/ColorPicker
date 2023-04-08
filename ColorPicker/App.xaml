@@ -1,9 +1,9 @@
-﻿<Application
+<prism:PrismApplication
     x:Class="ColorPicker.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="clr-namespace:ColorPicker"
-    StartupUri="Views/MainWindow.xaml">
+    xmlns:prism="http://prismlibrary.com/">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -12,4 +12,4 @@
             <!--  Other app resources here  -->
         </ResourceDictionary>
     </Application.Resources>
-</Application>
+</prism:PrismApplication>
